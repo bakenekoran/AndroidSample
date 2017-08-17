@@ -21,7 +21,6 @@ public class AsyncTaskHttpRequest extends AsyncTask<Uri.Builder, Void, Bitmap>{
 
     @Override
     protected Bitmap doInBackground(Uri.Builder... builder){
-        // 受け取ったbuilderでインターネット通信する
         HttpURLConnection connection = null;
         InputStream inputStream = null;
         Bitmap bitmap = null;
@@ -56,7 +55,6 @@ public class AsyncTaskHttpRequest extends AsyncTask<Uri.Builder, Void, Bitmap>{
 
     @Override
     protected void onPostExecute(Bitmap result){
-        // インターネット通信して取得した画像をImageViewにセットする
         this.imageView.setImageBitmap(result);
     }
 }
